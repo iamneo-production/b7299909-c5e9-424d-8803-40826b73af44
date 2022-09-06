@@ -1,0 +1,7 @@
+SELECT
+    st_name, count(CAND_NAME) "Total Candidates"
+    
+FROM
+    ELECTION
+WHERE year =2004
+group by st_name;
