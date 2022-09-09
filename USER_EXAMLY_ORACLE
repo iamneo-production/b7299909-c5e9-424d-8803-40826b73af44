@@ -1,7 +1,7 @@
 SELECT
-    st_name, count(CAND_NAME) "Total Candidates"
-    
-FROM
-    ELECTION
-WHERE year =2004
-group by st_name;
+     year,count(cand_name) "Total Female Candidates" 
+FROM ELECTION
+WHERE
+    cand_sex = 'F'
+group by year 
+order by year;
